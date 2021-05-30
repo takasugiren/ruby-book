@@ -1,10 +1,10 @@
 def fizz_buzz(n)
-  if n % 15 ==0
-    puts 'Fizz Buzz'
+  if n % 15 == 0
+    'Fizz Buzz'
   elsif n % 3 == 0
-    puts 'Fizz'
+    'Fizz'
   elsif n % 5 == 0
-    puts 'Buzz'
+    'Buzz'
   else
     n.to_s
   end
@@ -17,6 +17,10 @@ class FizzBuzzTest < Minitest::Test
     assert_equal '1', fizz_buzz(1)
     assert_equal '2', fizz_buzz(2)
     assert_equal 'Fizz', fizz_buzz(3)
+    assert_equal '4', fizz_buzz(4)
+    assert_equal 'Buzz', fizz_buzz(5)
+    assert_equal 'Fizz', fizz_buzz(6)
+    assert_equal 'Fizz Buzz', fizz_buzz(15)
   end
 end
 
